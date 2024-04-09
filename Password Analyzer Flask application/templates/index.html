@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Password Analyzer</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <style>
+      body {
+        background-image: url("background.jpg");
+        background-color: blue;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        place-items: center;
+        justify-content: center;
+        align-items: center;
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      label {
+        font-weight: bold;
+      }
+
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 15px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      .btn {
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 10px;
+        padding: 10px;
+        text-align: center;
+        transition: background-color 0.3s;
+      }
+      .test {
+        display: flex;
+        justify-content: "center";
+        padding: 10px;
+        align-item: center;
+        flex-direction: column;
+      }
+      .innerbutton {
+        text-align: center;
+      }
+
+      .btn:hover {
+        background-color: #0056b3;
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+
+      .strong {
+        color: green;
+        font-weight: bold;
+      }
+
+      .weak {
+        color: red;
+        font-weight: bold;
+      }
+
+      .suggestions {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Password Analyzer</h1>
+      <form method="POST" action="/">
+        <div class="test">
+          <label for="password">Enter your password:</label><br />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+          /><br /><br />
+        </div>
+        <div class="innerbutton">
+          <input type="submit" value="Analyze" class="btn" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
